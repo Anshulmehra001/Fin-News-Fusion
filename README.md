@@ -147,13 +147,15 @@ The platform's success will be validated by our backtesting engine against key f
 
 ### Team Information
 
-*   **Team Name:** [Your Team Name]
-*   **Contact:** [Your Contact Email]
+*   **Team Name:** VIREN
+*   **Team Leader:** Aniket Mehra
+*   **Team Member:** Yishu Bhaskar
+*   **Contact:** aniketmehra715@gmail.com
 
 ---
 
 <div align="center">
 
-**Copyright © 2025 [Your Team Name]. All Rights Reserved.**
+**Copyright © 2025 VIREN. All Rights Reserved.**
 
 </div>
