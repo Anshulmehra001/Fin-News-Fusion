@@ -71,29 +71,17 @@ Our architecture is built on a modern data cloud foundation, leveraging native S
 | **Logic & Analysis** | **Snowpark for Python** | Feature engineering and the core backtesting engine. |
 | **Presentation** | **Streamlit** | Interactive dashboard and user-facing application. |
 
-```text
-[ External APIs: NewsAPI, Alpha Vantage ]
-              |
-              v
-[ Snowflake Ingestion Layer (Snowpipe) ]
-              |
-              v
-[ Raw Data Tables (Variant JSON) ] --> [ Streams ]
-              |
-              v (Tasks)
-[ Cortex AI Processing (SQL) ]
-              |
-              v
-[ Enriched Features Table ]
-              |
-              v
-[ Snowpark Backtesting Engine (Python) ]
-              |
-              v
-[ Results & Signals Tables ]
-              |
-              v
-[ Streamlit Dashboard Application ]
+```mermaid
+graph TD;
+    A[External APIs: NewsAPI, Alpha Vantage] --> B(Snowflake Ingestion Layer <br> Snowpipe);
+    B --> C{Raw Data Tables <br> Variant JSON};
+    C --> D((Streams));
+    D -- triggers --> E(Tasks);
+    E -- runs --> F[Cortex AI Processing <br> SQL];
+    F --> G{Enriched Features Table};
+    G --> H[Snowpark Backtesting Engine <br> Python];
+    H --> I{Results & Signals Tables};
+    I --> J([Streamlit Dashboard Application]);
 ```
 ### Data & Logic Workflow: From Raw Data to Actionable Signal
 
